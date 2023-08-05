@@ -1,0 +1,66 @@
+@import "/src/common/colors.scss";
+
+.services {
+  display: flex;
+  flex-direction: column;
+  padding: 0 250px;
+
+  .title {
+    font-size: 3rem;
+    text-align: center;
+    font-weight: lighter;
+    margin-bottom: 15vh;
+  }
+
+  .services-nav {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 5vh;
+    column-gap: 5px;
+    text-align: center;
+    justify-content: center;
+
+    .nav-link {
+      width: 200px;
+      border: 1px solid black;
+      cursor: pointer;
+      padding: 15px;
+      text-align: center;
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .nav-link:hover {
+      background-color: black;
+      color: white;
+    }
+    .active-nav-link {
+      width: 200px;
+      border: 1px solid $sgt-blue;
+      background-color: $sgt-blue;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      height: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+  .subcontainer {
+    margin: 10vh 0;
+
+    .subtitle {
+      font-size: 2rem;
+      text-align: center;
+      font-weight: lighter;
+      margin-bottom: 10vh;
+    }
+    .body {
+      font-size: 1rem;
+      line-height: 30px;
+      font-weight: lighter;
+    }
+  }
+}

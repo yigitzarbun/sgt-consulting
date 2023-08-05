@@ -1,0 +1,46 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10vh;
+
+  .title {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: lighter;
+    margin-bottom: 15vh;
+  }
+  .texts {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 15vh 0;
+
+    .subtitle {
+      margin: 15vh 0 5vh 0;
+      font-size: 2rem;
+      font-weight: lighter;
+    }
+    .body {
+      width: 500px;
+      margin: 0 auto;
+      line-height: 30px;
+      font-weight: lighter;
+      margin-bottom: 5vh;
+    }
+    .button {
+      margin: 0 auto;
+      width: 150px;
+      height: 45px;
+      cursor: pointer;
+      background-color: white;
+      color: black;
+      border: 1px solid black;
+      font-weight: lighter;
+      font-size: 1rem;
+    }
+    .button:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}

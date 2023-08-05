@@ -1,0 +1,50 @@
+@import "/src/common/colors.scss";
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 85px;
+
+  .logo {
+    width: 100px;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    width: 500px;
+
+    .site-nav {
+      display: flex;
+      justify-content: space-between;
+      width: 350px;
+      align-items: center;
+      font-weight: lighter;
+
+      .nav-link {
+        text-decoration: none;
+        cursor: pointer;
+        color: black;
+        font-size: 1.2rem;
+      }
+      .active-nav-link {
+        text-decoration: none;
+        cursor: pointer;
+        color: $sgt-blue;
+        font-size: 1.2rem;
+      }
+    }
+
+    .social-nav {
+      display: flex;
+      justify-content: space-between;
+      width: 100px;
+      align-items: center;
+
+      .social-icon {
+        font-size: 20px;
+      }
+    }
+  }
+}
