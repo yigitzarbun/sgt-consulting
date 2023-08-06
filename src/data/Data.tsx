@@ -61,7 +61,7 @@ export const Projects = [
     location: "Utrecht, Netherlands",
     cover_image: "/images/portfolio/p5_cover.webp",
     image_1: "/images/portfolio/p5_img1.webp",
-    image_2: "/images/portfolio/p5/img2.webp",
+    image_2: "/images/portfolio/p5_img2.webp",
     image_3: null,
   },
   {

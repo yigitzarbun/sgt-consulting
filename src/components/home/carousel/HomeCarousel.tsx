@@ -19,7 +19,7 @@ const imagesAndTitles = [
   },
 ];
 
-const Carousel = () => {
+const HomeCarousel = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -44,4 +44,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default HomeCarousel;

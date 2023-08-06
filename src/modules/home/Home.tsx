@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import Carousel from "../../components/home/carousel/Carousel";
+import HomeCarousel from "../../components/home/carousel/HomeCarousel";
 
 import Paths from "../../routing/Paths";
 
@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className={styles.home}>
       <h1 className={styles.title}>Hotel Procurement With Style</h1>
-      <Carousel />
+      <HomeCarousel />
       <div className={styles.texts}>
         <h2 className={styles.subtitle}>Our Added Value</h2>
         <p className={styles.body}>

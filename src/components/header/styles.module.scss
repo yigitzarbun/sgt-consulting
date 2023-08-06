@@ -1,4 +1,5 @@
 @import "/src/common/colors.scss";
+@import "/src/common/media.scss";
 
 .header-container {
   display: flex;
@@ -6,6 +7,9 @@
   align-items: center;
   padding: 10px 85px;
 
+  @include small-screen {
+    padding: 10px 25px;
+  }
   .logo {
     width: 100px;
   }
@@ -22,11 +26,21 @@
       align-items: center;
       font-weight: lighter;
 
+      @include medium-screen {
+        justify-content: space-between;
+        margin: 0 auto;
+      }
+      @include small-screen {
+        display: none;
+      }
       .nav-link {
         text-decoration: none;
         cursor: pointer;
         color: black;
         font-size: 1.2rem;
+      }
+      .nav-link:hover {
+        color: gray;
       }
       .active-nav-link {
         text-decoration: none;
@@ -41,10 +55,33 @@
       justify-content: space-between;
       width: 100px;
       align-items: center;
-
+      @include medium-screen {
+        display: none;
+      }
+      @include small-screen {
+        display: none;
+      }
       .social-icon {
         font-size: 20px;
       }
+    }
+  }
+
+  .menu-icon {
+    font-size: 25px;
+
+    cursor: pointer;
+
+    @include large-screen {
+      display: none;
+    }
+
+    @include medium-screen {
+    }
+
+    @include small-screen {
+      font-size: 50px;
+      height: 50px;
     }
   }
 }

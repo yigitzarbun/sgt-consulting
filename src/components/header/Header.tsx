@@ -1,12 +1,22 @@
+import { useState } from "react";
+
 import { Link, NavLink } from "react-router-dom";
 
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa6";
+import { SlMenu } from "react-icons/sl";
 
 import Paths from "../../routing/Paths";
 
 import styles from "./styles.module.scss";
+import MenuModal from "./menu-modal/MenuModal";
 
 const Header = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleModal = () => {
+    setIsModalOpen((prev) => !prev);
+  };
+
   return (
     <div className={styles["header-container"]}>
       <Link to={Paths.HOME}>
@@ -61,6 +71,12 @@ const Header = () => {
           <FaInstagram className={styles["social-icon"]} />
         </div>
       </div>
+      <SlMenu className={styles["menu-icon"]} onClick={handleModal} />
+      <MenuModal
+        isModalOpen={isModalOpen}
+        handleModal={handleModal}
+        setIsModalOpen={setIsModalOpen}
+      />
     </div>
   );
 };

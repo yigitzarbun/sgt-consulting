@@ -1,0 +1,88 @@
+@import "/src/common/media.scss";
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  row-gap: 10px;
+  margin: 0 auto 20vh auto;
+  background-color: rgb(228, 237, 247);
+  padding: 30px;
+  @include medium-screen {
+    width: 70%;
+    padding: 20px;
+  }
+  @include small-screen {
+    width: 90%;
+  }
+  .input-outer-container {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+    @include small-screen {
+      flex-direction: column;
+      row-gap: 10px;
+      width: 100%;
+    }
+    .input-container {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      row-gap: 10px;
+      @include small-screen {
+        margin: 0 auto;
+      }
+    }
+
+    .error-field {
+      font-size: 0.9rem;
+      color: rgb(199, 62, 62);
+    }
+  }
+  .message-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    @include small-screen {
+      flex-direction: column;
+      row-gap: 10px;
+      width: 100%;
+    }
+
+    textarea {
+      height: 100px;
+      padding: 5px;
+      background-color: inherit;
+      border: 1px solid gray;
+      @include small-screen {
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+  }
+  input {
+    height: 20px;
+    padding: 5px;
+    background-color: inherit;
+    border: 1px solid gray;
+    @include small-screen {
+      height: 30px;
+    }
+  }
+  .button {
+    margin: 0 auto;
+    width: 150px;
+    height: 45px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    font-weight: lighter;
+    font-size: 1rem;
+  }
+  .button:hover {
+    background-color: white;
+    color: black;
+  }
+}
