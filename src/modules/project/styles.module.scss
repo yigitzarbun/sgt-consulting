@@ -1,6 +1,14 @@
+@import "/src/common/media.scss";
+
 .project {
   padding: 0 250px;
   cursor: pointer;
+  @include medium-screen {
+    padding: 0 40px;
+  }
+  @include small-screen {
+    padding: 0 10px;
+  }
   .title {
     font-size: 2rem;
     font-weight: lighter;

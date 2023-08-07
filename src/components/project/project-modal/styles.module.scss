@@ -1,3 +1,5 @@
+@import "/src/common/media.scss";
+
 .modal {
   width: 100%;
   height: 100%;
@@ -6,12 +8,20 @@
   flex-direction: column;
   border: none;
   padding: 50px 0;
-
+  @include medium-screen {
+    height: 50%;
+  }
+  @include small-screen {
+    height: 70%;
+  }
   .close {
     font-size: 30px;
     margin-left: auto;
     margin-right: 70px;
     cursor: pointer;
+    @include small-screen {
+      margin-right: 10px;
+    }
   }
 
   .image-container {
@@ -19,7 +29,14 @@
     justify-content: space-between;
     align-items: center;
     padding: 50px 70px;
-
+    @include medium-screen {
+      padding: 0;
+      margin-top: 5vh;
+    }
+    @include small-screen {
+      padding: 0 10px;
+      margin-top: 5vh;
+    }
     .prev {
       font-size: 30px;
       cursor: pointer;
@@ -29,6 +46,20 @@
       height: 400px;
       object-fit: cover;
       margin: 0 auto;
+      @include medium-screen {
+        width: 100%;
+        height: 400px;
+        object-fit: contain;
+        margin: 0 auto;
+        align-self: flex-start;
+      }
+      @include small-screen {
+        width: 90%;
+        height: 400px;
+        object-fit: contain;
+        margin: 0 auto;
+        align-self: flex-start;
+      }
     }
     .next {
       font-size: 30px;

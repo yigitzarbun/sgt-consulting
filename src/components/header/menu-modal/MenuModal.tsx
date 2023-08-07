@@ -11,29 +11,24 @@ import styles from "./styles.module.scss";
 
 interface MenuModalProps {
   isModalOpen: boolean;
-  handleModal: () => void;
-  setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  closeModal: () => void;
 }
 
-const MenuModal = ({
-  isModalOpen,
-  handleModal,
-  setIsModalOpen,
-}: MenuModalProps) => {
+const MenuModal = ({ isModalOpen, closeModal }: MenuModalProps) => {
   const navigate = useNavigate();
 
   const handleNavigate = (value: string) => {
-    navigate(Paths.value);
-    setIsModalOpen((prev) => !prev);
+    navigate(Paths[value]);
+    closeModal();
   };
 
   return (
     <Modal
       isOpen={isModalOpen}
-      onRequestClose={handleModal}
+      onRequestClose={closeModal}
       className={styles.modal}
     >
-      <RxCross2 onClick={handleModal} className={styles.close} />
+      <RxCross2 onClick={closeModal} className={styles.close} />
       <nav>
         <NavLink
           to={Paths.ABOUT}

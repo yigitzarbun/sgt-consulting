@@ -1,3 +1,5 @@
+@import "/src/common/media.scss";
+
 .footer {
   display: flex;
   align-items: center;
@@ -7,7 +9,9 @@
   border-top: 1px solid lightgray;
   width: 80%;
   margin: 0 auto;
-
+  @include small-screen {
+    flex-direction: column;
+  }
   .copyright-container {
     display: flex;
     align-items: center;

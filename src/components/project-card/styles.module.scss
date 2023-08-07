@@ -1,6 +1,15 @@
+@import "/src/common/media.scss";
+
 .card {
   width: 250px;
-
+  @include medium-screen {
+    width: 40%;
+    margin: 0 auto;
+  }
+  @include small-screen {
+    width: 90%;
+    margin: 0 auto;
+  }
   a {
     text-decoration: none;
     color: black;

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { Link, NavLink } from "react-router-dom";
 
@@ -13,10 +13,17 @@ import MenuModal from "./menu-modal/MenuModal";
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleModal = () => {
-    setIsModalOpen((prev) => !prev);
+  const openModal = () => {
+    setIsModalOpen(true);
   };
-
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+  useEffect(() => {
+    if (!isModalOpen) {
+      closeModal();
+    }
+  }, [isModalOpen, closeModal]);
   return (
     <div className={styles["header-container"]}>
       <Link to={Paths.HOME}>
@@ -71,12 +78,10 @@ const Header = () => {
           <FaInstagram className={styles["social-icon"]} />
         </div>
       </div>
-      <SlMenu className={styles["menu-icon"]} onClick={handleModal} />
-      <MenuModal
-        isModalOpen={isModalOpen}
-        handleModal={handleModal}
-        setIsModalOpen={setIsModalOpen}
-      />
+      <SlMenu className={styles["menu-icon"]} onClick={openModal} />
+      {isModalOpen && (
+        <MenuModal isModalOpen={isModalOpen} closeModal={closeModal} />
+      )}
     </div>
   );
 };

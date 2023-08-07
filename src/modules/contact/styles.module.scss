@@ -6,16 +6,24 @@
   padding: 0 250px;
 
   @include medium-screen {
-    padding: 0 90px;
+    padding: 0 100px;
   }
   @include small-screen {
-    padding: 5px;
+    padding: 0 20px;
   }
   .title {
     font-size: 3rem;
     text-align: center;
     font-weight: lighter;
     margin-bottom: 15vh;
+    @include medium-screen {
+      margin: 5vh auto 5vh auto;
+      width: 70%;
+    }
+    @include small-screen {
+      margin: 5vh auto 5vh auto;
+      width: 70%;
+    }
   }
   .address {
     width: 300px;

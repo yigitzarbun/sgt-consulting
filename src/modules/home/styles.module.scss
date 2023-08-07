@@ -1,3 +1,5 @@
+@import "/src/common/media.scss";
+
 .home {
   display: flex;
   flex-direction: column;
@@ -8,17 +10,37 @@
     font-size: 3rem;
     font-weight: lighter;
     margin-bottom: 15vh;
+    @include medium-screen {
+      margin: 5vh auto 5vh auto;
+      width: 70%;
+    }
+    @include small-screen {
+      margin-bottom: 5vh;
+      font-size: 2rem;
+      margin-top: 5vh;
+    }
   }
   .texts {
     display: flex;
     flex-direction: column;
     text-align: center;
     margin: 15vh 0;
-
+    @include medium-screen {
+      margin: 5vh 0;
+    }
+    @include small-screen {
+      margin: 5vh 0;
+    }
     .subtitle {
       margin: 15vh 0 5vh 0;
       font-size: 2rem;
       font-weight: lighter;
+      @include medium-screen {
+        margin: 5vh 0;
+      }
+      @include small-screen {
+        margin: 5vh 0;
+      }
     }
     .body {
       width: 500px;
@@ -26,6 +48,9 @@
       line-height: 30px;
       font-weight: lighter;
       margin-bottom: 5vh;
+      @include small-screen {
+        width: 90%;
+      }
     }
     .button {
       margin: 0 auto;

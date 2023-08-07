@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 85px;
+  padding: 25px 85px;
 
   @include small-screen {
     padding: 10px 25px;
@@ -81,7 +81,6 @@
 
     @include small-screen {
       font-size: 50px;
-      height: 50px;
     }
   }
 }

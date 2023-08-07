@@ -1,13 +1,28 @@
+@import "/src/common/media.scss";
+
 .about {
   display: flex;
   flex-direction: column;
   padding: 0 250px;
-
+  @include medium-screen {
+    padding: 0 100px;
+  }
+  @include small-screen {
+    padding: 0 20px;
+  }
   .title {
     font-size: 3rem;
     text-align: center;
     font-weight: lighter;
     margin-bottom: 15vh;
+    @include medium-screen {
+      margin: 5vh auto 5vh auto;
+      width: 70%;
+    }
+    @include small-screen {
+      margin: 5vh auto 5vh auto;
+      width: 70%;
+    }
   }
 
   .body {
@@ -17,12 +32,23 @@
   }
   .sub-container {
     margin: 10vh 0;
-
+    @include medium-screen {
+      margin: 5vh auto 5vh auto;
+    }
+    @include small-screen {
+      margin: 5vh auto 5vh auto;
+    }
     .subtitle {
       font-size: 2rem;
       text-align: center;
       font-weight: lighter;
       margin-bottom: 10vh;
+      @include medium-screen {
+        margin-bottom: 5vh;
+      }
+      @include small-screen {
+        margin-bottom: 5vh;
+      }
     }
     .added-value-icons-container {
       display: flex;
@@ -31,9 +57,12 @@
       width: 100%;
       row-gap: 10vh;
       column-gap: 10px;
+      @include medium-screen {
+        row-gap: 5vh;
+      }
 
       .icon-container {
-        width: 18%;
+        width: 30%;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -43,7 +72,6 @@
         font-size: 30px;
         margin: 0 auto;
       }
-
       .icon-text {
         width: 80%;
         margin: 0 auto;
